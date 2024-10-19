@@ -1,33 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:video_streaming_bloc_017/config/color/color.dart';
-import 'package:video_streaming_bloc_017/view/widgets/profile/profile.dart';
+import 'package:video_streaming_bloc_017/view/nextvedioplayer.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Video"),
-        backgroundColor: AppColors.blueColor,
+    // Sample list of video URLs
+    final videoUrls = [
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
+    ];
 
-        // actions: [
-        //   InkWell(
-        //     onTap: () {
-        //      const ProfileClass();
-        //     },
-        //     child:const Text("Click"),
-        //   )
-        // ],
-      ),
-      endDrawer: const ProfileClass(),
-      body: Column(),
-    );
+    return HorizontalVideoPlayer(videoUrls: videoUrls);
   }
 }

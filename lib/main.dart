@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:video_player/video_player.dart';
 import 'package:video_streaming_bloc_017/view/homepage.dart';
+import 'package:video_streaming_bloc_017/view/vedio_player.dart';
 
 
 void main() {
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage()
+      home:HomePage()
     );
   }
 }
